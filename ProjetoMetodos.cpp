@@ -3,7 +3,7 @@
 #include <time.h> 
 
 // Local para alterar e configurar o tamanho do vetor
-#define TAMANHO 5000
+#define TAMANHO 1000
 #define LIMITE_MAX 1000
 
 // Função geradora de numeros aleatorios
@@ -356,15 +356,15 @@ int main() {
 
 	// --- IMPRESSAO DOS RESULTADOS ---
 	printf("Resultados para TAMANHO = %d e LIMITE_MAX = %d:\n\n", TAMANHO, LIMITE_MAX);
-	printf("Bubble Sort:    %.6f segundos\n", t_bubble);
-	printf("Insertion Sort: %.6f segundos\n", t_insertion);
-	printf("Selection Sort: %.6f segundos\n", t_selection);
-	printf("Merge Sort:     %.6f segundos\n", t_merge);
-	printf("Quick Sort:     %.6f segundos\n", t_quick);
-	printf("Heap Sort:      %.6f segundos\n", t_heap);
-	printf("Counting Sort:  %.6f segundos\n", t_counting);
-	printf("Radix Sort:     %.6f segundos\n", t_radix);
-	printf("Bucket Sort:    %.6f segundos\n", t_bucket);
+	printf("Bubble Sort:    %.6f MILISEGUNDOS\n", t_bubble* 1000);
+	printf("Insertion Sort: %.6f MILISEGUNDOS\n", t_insertion* 1000);
+	printf("Selection Sort: %.6f MILISEGUNDOS\n", t_selection* 1000);
+	printf("Merge Sort:     %.6f MILISEGUNDOS\n", t_merge* 1000);
+	printf("Quick Sort:     %.6f MILISEGUNDOS\n", t_quick* 1000);
+	printf("Heap Sort:      %.6f MILISEGUNDOS\n", t_heap* 1000);
+	printf("Counting Sort:  %.6f MILISEGUNDOS\n", t_counting* 1000);
+	printf("Radix Sort:     %.6f MILISEGUNDOS\n", t_radix* 1000);
+	printf("Bucket Sort:    %.6f MILISEGUNDOS\n", t_bucket* 1000);
 
 	// Liberação de toda a memória alocada
 	free(vetor_original);
